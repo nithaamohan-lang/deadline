@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deadline — Dashboard</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="page-dashboard" data-nav-key="dashboard">
+
+  <div class="app-shell">
+    <div id="app-nav"></div>
+
+    <main class="page-main">
+      <header class="topbar">
+        <div>
+          <h1 id="greeting">Good morning, Student 👋</h1>
+          <p class="subtitle">Here's what you need to finish.</p>
+        </div>
+        <div id="notif-bell"></div>
+      </header>
+
+      <!-- Summary cards -->
+      <section class="stat-grid">
+        <div class="stat-card accent-blue">
+          <p class="stat-label">Active Tasks</p>
+          <p class="stat-value" id="statActive">0</p>
+        </div>
+        <div class="stat-card accent-red">
+          <p class="stat-label">Due Today</p>
+          <p class="stat-value" id="statToday">0</p>
+        </div>
+        <div class="stat-card accent-orange">
+          <p class="stat-label">Due Soon</p>
+          <p class="stat-value" id="statSoon">0</p>
+        </div>
+        <div class="stat-card accent-green">
+          <p class="stat-label">Completed</p>
+          <p class="stat-value" id="statCompleted">0</p>
+        </div>
+      </section>
+
+      <!-- Today's focus -->
+      <section class="section">
+        <div class="section-head">
+          <h2>🎯 Today's Focus</h2>
+        </div>
+        <div class="section-list" id="focusList"></div>
+      </section>
+
+      <!-- What should I do today -->
+      <section class="section">
+        <div class="section-head">
+          <h2>What should I do today?</h2>
+        </div>
+        <div id="todoTodayList"></div>
+      </section>
+
+      <!-- Upcoming deadlines -->
+      <section class="section">
+        <div class="section-head">
+          <h2>Upcoming Deadlines</h2>
+          <a class="btn btn-ghost btn-small" href="tasks.html">View all</a>
+        </div>
+        <div class="section-list" id="upcomingList"></div>
+      </section>
+
+      <!-- Progress -->
+      <section class="section">
+        <div class="section-head">
+          <h2>Academic Task Progress</h2>
+        </div>
+        <div class="progress-card">
+          <div class="progress-stats">
+            <span>Completed: <strong id="progressCompleted">0</strong></span>
+            <span>In Progress: <strong id="progressInProgress">0</strong></span>
+            <span>Not Started: <strong id="progressNotStarted">0</strong></span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressBarFill" style="width:0%"></div>
+          </div>
+          <p class="progress-percent" id="progressPercent">0%</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

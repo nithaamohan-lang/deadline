@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deadline — Add Task</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="page-add-task" data-nav-key="add-task">
+
+  <div class="app-shell">
+    <div id="app-nav"></div>
+
+    <main class="page-main">
+      <header class="page-header">
+        <h1 id="formHeading">Add Task</h1>
+        <div id="notif-bell"></div>
+      </header>
+
+      <form class="form-card" id="taskForm" novalidate>
+        <div class="form-errors" id="formErrors" hidden></div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="subjectSelect">Subject</label>
+            <select id="subjectSelect"></select>
+          </div>
+          <div class="field" id="customSubjectWrap" hidden>
+            <label for="customSubject">Custom subject</label>
+            <input type="text" id="customSubject" placeholder="e.g. Data Communication" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="typeSelect">Task Type</label>
+          <select id="typeSelect"></select>
+        </div>
+
+        <div class="field">
+          <label for="titleInput">Topic / Title</label>
+          <input type="text" id="titleInput" placeholder="e.g. Binary Search Tree" />
+        </div>
+
+        <div class="field">
+          <label for="descriptionInput">Description <span class="hint-text" style="display:inline">(optional)</span></label>
+          <textarea id="descriptionInput" placeholder="Any extra details about this task..."></textarea>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="dateInput">Deadline Date</label>
+            <input type="date" id="dateInput" />
+          </div>
+          <div class="field">
+            <label for="timeInput">Deadline Time</label>
+            <input type="time" id="timeInput" value="23:59" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="prioritySelect">Priority</label>
+            <select id="prioritySelect">
+              <option value="High">🔴 High</option>
+              <option value="Medium" selected>🟠 Medium</option>
+              <option value="Low">🟢 Low</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="statusSelect">Status</label>
+            <select id="statusSelect">
+              <option value="Not Started">Not Started</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="submitBtn">Save Task</button>
+          <button type="button" class="btn btn-ghost" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

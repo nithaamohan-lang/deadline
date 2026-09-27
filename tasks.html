@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deadline — All Tasks</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="page-tasks" data-nav-key="tasks">
+
+  <div class="app-shell">
+    <div id="app-nav"></div>
+
+    <main class="page-main">
+      <header class="page-header">
+        <h1>All Tasks</h1>
+        <div id="notif-bell"></div>
+      </header>
+
+      <div class="filters-bar">
+        <input type="text" id="searchInput" placeholder="Search by subject, topic or title..." />
+        <select id="filterSubject"></select>
+        <select id="filterType"></select>
+        <select id="filterPriority">
+          <option value="All">All Priorities</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <select id="filterStatus">
+          <option value="All">All Statuses</option>
+          <option value="Not Started">Not Started</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <select id="sortSelect">
+          <option value="deadline-asc">Nearest deadline</option>
+          <option value="deadline-desc">Latest deadline</option>
+          <option value="priority">Priority</option>
+          <option value="recent">Recently added</option>
+        </select>
+        <button class="btn btn-ghost btn-small" id="clearFiltersBtn">Clear</button>
+      </div>
+
+      <p class="results-count" id="resultsCount">0 tasks</p>
+
+      <div class="section-list" id="allTasksList"></div>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

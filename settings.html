@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deadline — Settings</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="page-settings" data-nav-key="settings">
+
+  <div class="app-shell">
+    <div id="app-nav"></div>
+
+    <main class="page-main">
+      <header class="page-header">
+        <h1>Settings</h1>
+        <div id="notif-bell"></div>
+      </header>
+
+      <div class="settings-card">
+        <h3>Notifications</h3>
+        <p class="settings-desc">Get reminders as deadlines approach.</p>
+        <div class="settings-row">
+          <span>Enable reminders</span>
+          <label class="switch">
+            <input type="checkbox" id="notifToggle" />
+            <span class="switch-track"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-card">
+        <h3>Theme</h3>
+        <p class="settings-desc">Choose how Deadline looks on this device.</p>
+        <div class="settings-row">
+          <span>Appearance</span>
+          <select id="themeSelect">
+            <option value="light">Light mode</option>
+            <option value="dark">Dark mode</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="settings-card danger-zone">
+        <h3>Data</h3>
+        <p class="settings-desc">Manage the tasks stored on this device.</p>
+        <button class="btn btn-ghost" id="clearCompletedBtn">Clear Completed Tasks</button>
+        <button class="btn btn-danger" id="clearAllBtn">Clear All Tasks</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deadline — Calendar</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="page-calendar" data-nav-key="calendar">
+
+  <div class="app-shell">
+    <div id="app-nav"></div>
+
+    <main class="page-main">
+      <header class="page-header">
+        <h1>Calendar</h1>
+        <div id="notif-bell"></div>
+      </header>
+
+      <div class="calendar-controls">
+        <button class="btn btn-ghost btn-small" id="prevMonthBtn">← Prev</button>
+        <h2 id="calendarMonthLabel">Month Year</h2>
+        <button class="btn btn-ghost btn-small" id="nextMonthBtn">Next →</button>
+        <button class="btn btn-ghost btn-small" id="todayBtn">Today</button>
+      </div>
+
+      <div class="cal-legend">
+        <span>🔴 High priority</span>
+        <span>🟠 Medium priority</span>
+        <span>🟢 Completed</span>
+      </div>
+
+      <div class="cal-grid" id="calendarWeekdays">
+        <div class="cal-weekday">Sun</div>
+        <div class="cal-weekday">Mon</div>
+        <div class="cal-weekday">Tue</div>
+        <div class="cal-weekday">Wed</div>
+        <div class="cal-weekday">Thu</div>
+        <div class="cal-weekday">Fri</div>
+        <div class="cal-weekday">Sat</div>
+      </div>
+      <div class="cal-grid" id="calendarGrid"></div>
+
+      <section class="cal-day-panel">
+        <div class="section-head">
+          <h2 id="calDayHeading">Select a date</h2>
+        </div>
+        <div class="section-list" id="calDayList"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
